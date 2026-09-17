@@ -182,11 +182,12 @@ export default function AboutPage() {
         >
           <div className="absolute inset-0 bg-[#020617]/20 z-10 pointer-events-none" />
           <video 
-            src="/core.mp4" 
+            src="/core.MP4" 
             autoPlay 
             loop 
             muted 
             playsInline 
+            preload="none"
             className="w-full h-full object-cover"
           />
         </motion.div>
