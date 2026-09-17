@@ -71,7 +71,7 @@ function useDebouncedCallback<T extends (...args: any[]) => any>(
 export default function BussinessProcess() {
   const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const checkMobile = useCallback(() => {
     setIsMobile(window.innerWidth < 1024);
