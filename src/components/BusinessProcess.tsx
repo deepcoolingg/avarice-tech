@@ -89,7 +89,7 @@ export default function BussinessProcess() {
   // Toggle bisa dipicu hover ATAU klik/keyboard — jadi aksesibel untuk
   // pengguna keyboard, touch, dan mouse presisi rendah.
   const toggleOpen = () => setOpen((prev) => !prev);
-  const handleKeyToggle = (e) => {
+  const handleKeyToggle = (e: React.KeyboardEvent<HTMLButtonElement>) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       toggleOpen();
