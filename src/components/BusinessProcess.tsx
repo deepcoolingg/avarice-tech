@@ -54,10 +54,13 @@ const mobilePositions = [
 ];
 
 // Debounce helper — cegah resize handler nembak terus-menerus
-function useDebouncedCallback(callback: () => void, delay: number) {
+function useDebouncedCallback<T extends (...args: any[]) => any>(
+  callback: T,
+  delay: number
+) {
   const timer = useRef<NodeJS.Timeout | null>(null);
   return useCallback(
-    (...args: any[]) => {
+    (...args: Parameters<T>) => {
       if (timer.current) clearTimeout(timer.current);
       timer.current = setTimeout(() => callback(...args), delay);
     },
