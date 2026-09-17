@@ -50,6 +50,7 @@ export default function Navbar() {
                         height={120}
                         className="object-contain w-14 h-14 md:w-auto md:h-auto"
                         priority
+                        quality={90}
                     />
                     <span className="text-[18px] md:text-[24px] font-semibold tracking-wide whitespace-nowrap">AVARICE TECH</span>
                 </Link>

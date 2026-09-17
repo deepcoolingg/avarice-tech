@@ -48,26 +48,26 @@ const features = [
   {
     title: "User Focused",
     desc: "Designed with intuitive interactions and real user experience.",
-    icon: <Users className="w-6 h-6 text-blue-500" />,
+    icon: <Users className="w-6 h-6 text-accent" />,
   },
 
   {
     title: "High Quality",
     desc: "Pixel-perfect interface with premium visual aesthetics.",
-    icon: <Gem className="w-6 h-6 text-blue-500" />,
+    icon: <Gem className="w-6 h-6 text-accent" />,
   },
 
   {
     title: "Performance",
     desc: "Fast, smooth, and optimized across every device.",
-    icon: <Zap className="w-6 h-6 text-blue-500" />,
+    icon: <Zap className="w-6 h-6 text-accent" />,
   },
 
   {
     title: "Reliable",
     desc: "Scalable solutions built for long-term digital growth.",
     icon: (
-      <ShieldCheck className="w-6 h-6 text-blue-500" />
+      <ShieldCheck className="w-6 h-6 text-accent" />
     ),
   },
 ];
@@ -80,7 +80,7 @@ export default function ProjectsPage() {
       {/* HERO */}
       <section className="relative px-6 md:px-16 pt-36 pb-28 border-b border-white/10 overflow-hidden">
         {/* BG GLOW */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-600/20 blur-[180px] rounded-full" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-accent/10 blur-[180px] rounded-full" />
 
         <div className="max-w-[1600px] mx-auto grid lg:grid-cols-2 gap-24 items-center relative z-10">
           {/* LEFT */}
@@ -94,7 +94,8 @@ export default function ProjectsPage() {
               y: 0,
             }}
             transition={{
-              duration: 1,
+              duration: 1.2,
+              ease: [0.22, 1, 0.36, 1],
             }}
           >
             <div className="flex items-center gap-4 mb-8">
@@ -129,7 +130,7 @@ export default function ProjectsPage() {
                 >
                   <div className="absolute top-7 left-14 w-full h-[1px] bg-white/10" />
 
-                  <div className="relative z-10 w-16 h-16 rounded-2xl border border-blue-500/20 bg-blue-500/5 backdrop-blur-xl flex items-center justify-center shadow-[0_0_40px_rgba(59,130,246,0.15)] group-hover:scale-110 transition duration-500">
+                  <div className="relative z-10 w-16 h-16 rounded-2xl border border-accent/20 bg-accent/5 backdrop-blur-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-700">
                     {item.icon}
                   </div>
 
@@ -160,13 +161,14 @@ export default function ProjectsPage() {
               rotate: 0,
             }}
             transition={{
-              duration: 1,
+              duration: 1.2,
+              ease: [0.22, 1, 0.36, 1],
             }}
             className="relative flex items-center justify-center min-h-[450px] md:min-h-[720px] w-full"
           >
             <div className="relative w-full h-full flex items-center justify-center transform scale-[0.55] sm:scale-[0.7] lg:scale-100 mt-[-50px] md:mt-0">
-            {/* BLUE GLOW */}
-            <div className="absolute w-[620px] h-[620px] bg-blue-600/20 blur-[160px] rounded-full" />
+            {/* ACCENT GLOW */}
+            <div className="absolute w-[620px] h-[620px] bg-accent/10 blur-[160px] rounded-full" />
 
             {/* DESKTOP */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
@@ -178,8 +180,9 @@ export default function ProjectsPage() {
                 transition={{
                   duration: 6,
                   repeat: Infinity,
+                  ease: "easeInOut",
                 }}
-                className="relative w-[580px] h-[420px] rounded-[40px] overflow-hidden border border-blue-400/20 bg-[#0f172a] shadow-[0_0_120px_rgba(59,130,246,0.25)]"
+                className="relative w-[580px] h-[420px] rounded-[40px] overflow-hidden border border-white/20 bg-[#0f172a] shadow-xl"
               >
               <Image
                 src="https://i.pinimg.com/1200x/ca/89/12/ca8912fb998143654316ed16bd4e081d.jpg"
@@ -209,8 +212,9 @@ export default function ProjectsPage() {
               transition={{
                 duration: 7,
                 repeat: Infinity,
+                ease: "easeInOut",
               }}
-              className="absolute z-30 left-6 bottom-12 w-[170px] h-[340px] rounded-[40px] overflow-hidden border border-blue-300/30 bg-[#0f172a] shadow-[0_0_80px_rgba(59,130,246,0.25)]"
+              className="absolute z-30 left-6 bottom-12 w-[170px] h-[340px] rounded-[40px] overflow-hidden border border-white/30 bg-[#0f172a] shadow-xl"
             >
               <Image
                 src="https://i.pinimg.com/1200x/6e/ed/b4/6eedb4be08132f2b1323040356723922.jpg"
@@ -239,8 +243,9 @@ export default function ProjectsPage() {
               transition={{
                 duration: 5,
                 repeat: Infinity,
+                ease: "easeInOut",
               }}
-              className="absolute right-0 bottom-4 z-10 w-[260px] h-[240px] rounded-[36px] overflow-hidden border border-blue-300/20 bg-[#111827] shadow-[0_0_70px_rgba(59,130,246,0.2)]"
+              className="absolute right-0 bottom-4 z-10 w-[260px] h-[240px] rounded-[36px] overflow-hidden border border-white/20 bg-[#111827] shadow-lg"
             >
               <Image
                 src="https://i.pinimg.com/736x/a2/a7/dd/a2a7dd7abbc9f05f2ac677c59d50c2db.jpg"
@@ -269,8 +274,8 @@ export default function ProjectsPage() {
             key={index}
             initial={{
               opacity: 0,
-              y: 180,
-              scale: 0.94,
+              y: 120,
+              scale: 0.96,
             }}
             whileInView={{
               opacity: 1,
@@ -278,7 +283,7 @@ export default function ProjectsPage() {
               scale: 1,
             }}
             transition={{
-              duration: 1.2,
+              duration: 1.4,
               ease: [0.22, 1, 0.36, 1],
             }}
             viewport={{
@@ -305,8 +310,8 @@ export default function ProjectsPage() {
                 x: 0,
               }}
               transition={{
-                duration: 1,
-                delay: 0.15,
+                duration: 1.2,
+                delay: 0.2,
                 ease: [0.22, 1, 0.36, 1],
               }}
               viewport={{
@@ -370,17 +375,18 @@ export default function ProjectsPage() {
                 x: 0,
               }}
               transition={{
-                duration: 1.2,
+                duration: 1.4,
+                ease: [0.22, 1, 0.36, 1],
               }}
               className="relative min-h-[400px] md:min-h-[650px] flex items-center justify-center mt-10 md:mt-0"
             >
               <div className="relative flex items-center justify-center transform scale-[0.6] sm:scale-75 lg:scale-100">
               {/* GLOW */}
-              <div className="absolute w-[500px] h-[500px] bg-blue-600/15 blur-[120px] rounded-full" />
+              <div className="absolute w-[500px] h-[500px] bg-accent/10 blur-[120px] rounded-full" />
 
               {/* MAIN */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="relative w-[500px] h-[340px] rounded-[40px] overflow-hidden border border-white/10 bg-[#111827] rotate-[-4deg] shadow-[0_0_120px_rgba(59,130,246,0.2)]">
+                <div className="relative w-[500px] h-[340px] rounded-[40px] overflow-hidden border border-white/10 bg-[#111827] rotate-[-4deg] shadow-xl">
                 <Image
                   src={project.image1} // <-- Ganti dari projects jadi project
                   alt={`${project.title} Preview 1`} // Tambahin alt biar warning ESLint hilang
@@ -399,7 +405,7 @@ export default function ProjectsPage() {
               </div>
 
               {/* MOBILE */}
-              <div className="absolute left-0 bottom-8 w-[150px] h-[300px] rounded-[36px] overflow-hidden border border-white/10 bg-[#111827] rotate-[-12deg] shadow-[0_0_80px_rgba(59,130,246,0.2)]">
+              <div className="absolute left-0 bottom-8 w-[150px] h-[300px] rounded-[36px] overflow-hidden border border-white/10 bg-[#111827] rotate-[-12deg] shadow-lg">
                 <Image
                   src={project.image2} // <-- Ganti dari projects jadi project
                   alt={`${project.title} Preview 2`}
@@ -421,7 +427,7 @@ export default function ProjectsPage() {
       <section className="px-6 md:px-16 pb-24">
         <div className="max-w-[1600px] mx-auto">
           <div className="relative overflow-hidden rounded-[40px] md:rounded-[50px] border border-white/10 bg-gradient-to-r from-[#020617] to-[#071132] px-6 md:px-20 py-16 md:py-24">
-            <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-blue-600/20 blur-[140px]" />
+            <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-accent/10 blur-[140px]" />
 
             <div className="relative z-10">
               <span className="uppercase tracking-[0.35em] text-sm text-white/35">

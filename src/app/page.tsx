@@ -6,6 +6,13 @@ import TechMarquee from "@/components/TechMarquee";
 import Services from "@/components/Services"
 import Footer from "@/layout/Footer";
 import BusinessProcess from "@/components/BusinessProcess";
+import CallToAction from "@/components/CallToAction";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Avarice Tech | Software House & Digital Agency",
+  description: "Avarice Tech provides full stack web development, digital transformation, and business intelligence solutions for B2B enterprises.",
+};
 
 
 export default function Home() {
@@ -18,6 +25,7 @@ export default function Home() {
       <TechMarquee />
       <Services />
       <BusinessProcess />
+      <CallToAction />
       <Footer />
     </main>
   );

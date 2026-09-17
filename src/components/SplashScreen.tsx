@@ -8,14 +8,23 @@ export default function SplashScreen() {
   const [remove, setRemove] = useState(false);
 
   useEffect(() => {
+    // Skip splash for returning visitors (session-based)
+    const hasVisited = sessionStorage.getItem('hasVisited');
+    if (hasVisited) {
+      setRemove(true);
+      document.body.style.overflow = "auto";
+      return;
+    }
+    sessionStorage.setItem('hasVisited', 'true');
+
     document.body.style.overflow = "hidden";
 
-    const hideTimer = setTimeout(() => setHide(true), 2000);
+    const hideTimer = setTimeout(() => setHide(true), 800);
 
     const removeTimer = setTimeout(() => {
       setRemove(true);
       document.body.style.overflow = "auto";
-    }, 3600);
+    }, 1200);
 
     return () => {
       clearTimeout(hideTimer);
@@ -44,6 +53,7 @@ export default function SplashScreen() {
             width={120}
             height={120}
             priority
+            quality={90}
             className="relative object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.15)]"
           />
         </div>

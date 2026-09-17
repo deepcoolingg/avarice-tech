@@ -17,6 +17,7 @@ export default function Footer() {
                                 alt="Avarice Tech Logo"
                                 width={150}
                                 height={150}
+                                loading="lazy"
                                 className="object-contain w-20 h-20 md:w-auto md:h-auto"
                             />
                             <span className="font-heading font-bold text-[22px] md:text-[30px] tracking-wide whitespace-nowrap">AVARICE TECH</span>
@@ -27,8 +28,8 @@ export default function Footer() {
 
                             <div className="flex items-center gap-3 group">
                                 <Mail size={18} className="text-white/40 group-hover:text-accent transition-colors" />
-                                <a href="mailto:info@avarice.tech" className="text-white/80 hover:text-accent transition-colors">
-                                    techavarice@gmail.com
+                                <a href="mailto:contact.avaricetech@gmail.com" className="text-white/80 hover:text-accent transition-colors">
+                                    contact.avaricetech@gmail.com
                                 </a>
                             </div>
 

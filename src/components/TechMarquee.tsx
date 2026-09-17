@@ -47,6 +47,7 @@ export default function TechMarquee() {
                                         fill
                                         sizes="(max-width: 768px) 40px, 48px"
                                         className="object-contain"
+                                        loading="lazy"
                                     />
                                 </div>
 

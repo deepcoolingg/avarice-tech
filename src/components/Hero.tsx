@@ -58,7 +58,8 @@ export default function Hero() {
                         loop
                         muted
                         playsInline
-                        preload="metadata"
+                        preload="none"
+                        poster="/showcase-poster.jpg"
                         className="absolute inset-0 w-full h-full object-cover"
                     >
                         <source src="/showcase.mp4" type="video/mp4" />
